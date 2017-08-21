@@ -1,5 +1,6 @@
 {
-  "name": "qyresearch-frontend",
+  "name": "angular4-seed",
+  "description": "angular4 seed project",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
