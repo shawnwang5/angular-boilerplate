@@ -1,0 +1,9 @@
+@import "../shared/scss/variables";
+
+.layout.app {
+  & > .app-content {
+    .content-wrapper {
+      padding: 0 $containerPaddingLeft;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="date-container">
+    <app-select
+            [currText]="currYear"
+            [dataList]="yearList"
+            (selectChanged)="handleYearSelectChanged($event)">
+    </app-select>
+    <app-select
+            [currText]="currMonth"
+            [dataList]="monthList"
+            (selectChanged)="handleMonthSelectChanged($event)">
+    </app-select>
+</div>

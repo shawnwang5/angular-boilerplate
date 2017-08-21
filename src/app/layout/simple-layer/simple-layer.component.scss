@@ -1,0 +1,66 @@
+.simple-layer {
+  .layer-shade {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+  }
+
+  .layer {
+    min-width: 300px;
+    padding: 34px 68px 51px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background-color: #FFF;
+
+    & > .title {
+      font-size: 24px;
+      color: #3664a2;
+      position: relative;
+
+      .qy-icon-close {
+        cursor: pointer;
+        position: absolute;
+        top: -16px;
+        right: -50px;
+      }
+    }
+
+    & > .content {
+      font-size: 18px;
+      color: #222222;
+      line-height: 26px;
+      margin: 53px 0 72px;
+    }
+
+    & > .footer {
+      display: flex;
+
+      button {
+        flex: 1;
+        font-size: 16px;
+        color: #FFF;
+        line-height: 46px;
+        background-color: #3498db;
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        &.cancel {
+          background-color: rgb(110, 105, 105);
+        }
+      }
+    }
+  }
+}

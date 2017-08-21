@@ -1,0 +1,7 @@
+<div class="select" (clickOutside)="handleClickedOutside()">
+    <div class="select-text" (click)="isShowSelectUL = !isShowSelectUL">{{ currText }}</div>
+    <ul class="select-ul" [style.display]="isShowSelectUL ? 'inline-block' : 'none'">
+        <li *ngFor="let item of dataList" (click)="handleSelectItemClick(item)">{{ item.text }}
+        </li>
+    </ul>
+</div>

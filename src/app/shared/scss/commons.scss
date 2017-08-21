@@ -1,0 +1,81 @@
+/** start resets.scss **/
+.clearfix {
+  &::before, &::after {
+    content: '';
+    clear: both;
+  }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.no-margin-right {
+  margin-right: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+  margin-left: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-error, .text-info {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.text-error {
+  color: red;
+}
+
+.text-info {
+  color: #000;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.no-data {
+  font-size: 24px;
+  margin: 30px 0;
+  color: #333;
+  text-align: center;
+}
+
+/** end resets.scss **/
