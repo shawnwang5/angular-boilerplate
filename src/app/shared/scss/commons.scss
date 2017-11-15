@@ -78,22 +78,4 @@
   text-align: center;
 }
 
-a {
-  &:hover, &:focus {
-    text-decoration: none;
-  }
-}
-
-a.text-btn {
-  display: inline-block;
-  font-size: 18px;
-  color: #2BB9E6;
-  text-decoration: none;
-  cursor: pointer;
-
-  &:hover, &:focus {
-    color: #21BFF1;
-  }
-}
-
 /** end commons.scss **/
