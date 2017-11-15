@@ -1,25 +1,23 @@
 .select {
+  box-sizing: border-box;
   background-color: #FFF;
-  position: relative;
   display: inline-block;
-  line-height: 36px;
   border: 1px solid #eee;
   cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    margin-top: -2px;
-    border-top: 5px solid #666;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-  }
+  position: relative;
+  line-height: 44px;
 
   & > .select-text {
     padding: 0 30px 0 10px;
     color: #222222;
+    position: relative;
+
+    .icon {
+      font-size: 16px;
+      position: absolute;
+      right: 14px;
+      top: 14px;
+    }
   }
 
   & > .select-ul {
@@ -28,13 +26,13 @@
     overflow-y: auto;
     display: none;
     position: absolute;
-    top: 36px;
+    top: 50px;
     left: 0;
     z-index: 10000;
     border: 1px solid #D4D4D4;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
-    background: #fff;
+    background: #FFF;
 
     & > li {
       text-indent: 10px;

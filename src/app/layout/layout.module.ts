@@ -9,8 +9,7 @@ import { HeaderComponent } from './header/header.component'
 import { FooterComponent } from './footer/footer.component'
 import { SharedModule } from '../shared/shared.module'
 import { LayoutChildGuardService } from './layout-child-guard.service'
-import { SimpleLayerComponent } from './simple-layer/simple-layer.component'
-import { SimpleLayerService } from './simple-layer/simple-layer.service'
+import { MenuComponent } from './menu/menu.component'
 
 @NgModule({
     imports: [
@@ -22,12 +21,11 @@ import { SimpleLayerService } from './simple-layer/simple-layer.service'
     declarations: [
         LayoutComponent,
         HeaderComponent,
-        SimpleLayerComponent,
+        MenuComponent,
         FooterComponent
     ],
     providers: [
-        LayoutChildGuardService,
-        SimpleLayerService
+        LayoutChildGuardService
     ],
     exports: [
         LayoutComponent

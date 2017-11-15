@@ -1,0 +1,56 @@
+$menuPaddingLeftIncrement: 20;
+
+.menu {
+  background-color: #364760;
+  color: #FFF;
+  display: flex;
+  flex: 1;
+
+  .level1 {
+    flex: 1;
+
+    &.folded {
+      .level2 {
+        display: none;
+      }
+    }
+
+    @mixin itemActive {
+      color: #2BB9E6;
+      background-color: #2A394F;
+    }
+
+    .menu-item {
+      line-height: 60px;
+
+      &.active {
+        & > .menu-text {
+          @include itemActive;
+        }
+      }
+
+      & > .menu-text {
+        color: #FFF;
+        display: block;
+        cursor: pointer;
+        padding-left: $menuPaddingLeftIncrement + px;
+
+        &.active {
+          @include itemActive;
+        }
+
+        .icon {
+          vertical-align: middle;
+          margin-right: 10px;
+          margin-top: -4px;
+        }
+      }
+    }
+
+    .level2 {
+      .menu-text {
+        padding-left: $menuPaddingLeftIncrement * 2 + px;
+      }
+    }
+  }
+}

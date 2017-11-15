@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { DevToolsExtension, NgRedux, NgReduxModule } from '@angular-redux/store'
+import { NgRedux, NgReduxModule } from '@angular-redux/store'
 import { Reducer } from 'redux'
 
 import { StoreActions } from './store.actions'
-import { INITIAL_STATE, rootReducer } from './store.reducers'
-import { IAppState } from './IAppState'
+import { rootReducer } from './store.reducers'
+import { IAppState } from './models'
+import { INITIAL_STATE } from './initial-state'
 
 @NgModule({
     imports: [
@@ -20,7 +21,7 @@ import { IAppState } from './IAppState'
     ]
 })
 export class StoreModule {
-    constructor (ngRedux: NgRedux<IAppState>, devTools: DevToolsExtension) {
+    constructor (ngRedux: NgRedux<IAppState>) {
         ngRedux.configureStore(
             <Reducer<IAppState>>rootReducer,
             INITIAL_STATE

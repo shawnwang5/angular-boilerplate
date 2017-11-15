@@ -1,6 +1,12 @@
+/*<div class="checkbox">
+<input [id]="'checkbox'" type="checkbox"/>
+<label [for]="'checkbox'"> <i class="icon"></i>复选框</label>
+</div>*/
+
 .checkbox {
   display: inline-block;
   vertical-align: top;
+  margin: 0 !important;
 
   label {
     cursor: pointer;
@@ -9,7 +15,7 @@
       width: 20px;
       height: 20px;
       display: inline-block;
-      vertical-align: top;
+      vertical-align: text-bottom;
       position: relative;
       border: 1px solid #cccccc;
       border-radius: 4px;
@@ -19,8 +25,8 @@
 
       &::after {
         content: '';
-        width: 9px;
-        height: 5px;
+        width: 13px;
+        height: 8px;
         position: absolute;
         top: 3px;
         left: 3px;
@@ -39,8 +45,8 @@
 
     &:checked + label {
       & > i.icon {
-        background-color: #3399cc;
-        border-color: #3399cc;
+        background-color: #2BB9E6;
+        border-color: #2BB9E6;
 
         &::after {
           border-left-color: #FFF;

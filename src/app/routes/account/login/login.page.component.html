@@ -1,0 +1,24 @@
+<div class="page">
+    <div class="login-container">
+        <form class="login-wrapper" [formGroup]="valForm">
+            <div class="title">登录</div>
+            <div class="form-group">
+                <input class="form-control" name="username" placeholder="用户名" [formControlName]="'username'">
+                <p class="text-error"
+                   *ngIf="valForm.controls.username.dirty && valForm.controls.username.errors?.required">请输入用户名</p>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="密码"
+                       [formControlName]="'password'">
+                <p class="text-error"
+                   *ngIf="valForm.controls.password.dirty && valForm.controls.password.errors?.required">请输入密码</p>
+            </div>
+            <a href="javascript: void(0)" class="text-btn" [routerLink]="'/account/forgetPassword/step1'">忘记密码</a>
+            <button class="btn btn-default" (click)="login()">登录</button>
+            <div class="register">
+                <span>还没有账号?</span>
+                <a href="javascript: void(0)" class="text-btn" [routerLink]="'/account/register'">免费申请账号</a>
+            </div>
+        </form>
+    </div>
+</div>

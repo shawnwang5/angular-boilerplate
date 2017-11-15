@@ -1,0 +1,15 @@
+<div class="component" [class.hidden]="!isShow">
+    <div class="layer-shade"></div>
+    <div class="layer">
+        <div class="title">
+            <span>{{ title }}</span>
+            <i class="icon icon-delete" (click)="hide()"></i>
+        </div>
+        <div class="content">
+        </div>
+        <div class="footer">
+            <p class="empty"></p>
+            <button class="btn btn-primary" (click)="handleOkBtnClick()">提交</button>
+        </div>
+    </div>
+</div>

@@ -2,12 +2,13 @@
     <app-header></app-header>
 
     <section class="app-content">
+        <app-menu></app-menu>
         <div class="content-wrapper">
-            <router-outlet></router-outlet>
+            <div class="page-container">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </section>
 
     <app-footer></app-footer>
-
-    <app-simple-layer></app-simple-layer>
 </div>

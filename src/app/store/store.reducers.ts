@@ -1,10 +1,11 @@
-import { Action } from 'redux'
-import { IAppState } from './IAppState'
+import { Action, combineReducers, Reducer } from 'redux'
+import { INITIAL_COMMONS_STATE } from './initial-commons-state'
+import { ICommons } from './models'
 
-export const INITIAL_STATE: IAppState = {
-    name: 'angular4-seed'
+function commonReducer (state: ICommons = INITIAL_COMMONS_STATE, action: Action): ICommons {
+    return state
 }
 
-export function rootReducer (previousState: IAppState, action: Action): IAppState {
-    return previousState
-}
+export const rootReducer: Reducer<any> = combineReducers({
+    commons: commonReducer
+})

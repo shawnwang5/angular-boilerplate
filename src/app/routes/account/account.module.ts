@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
 
-import { HomePageComponent } from './home/home.page.component'
+import { LoginPageComponent } from './login/login.page.component'
 import { SharedModule } from '../../shared/shared.module'
 
 const routes: Routes = [
-    { path: '', component: HomePageComponent }
+    { path: 'login', component: LoginPageComponent }
 ]
 
 @NgModule({
@@ -16,11 +16,11 @@ const routes: Routes = [
         CommonModule
     ],
     declarations: [
-        HomePageComponent
+        LoginPageComponent
     ],
     exports: [
         RouterModule
     ]
 })
-export class HomeModule {
+export class AccountModule {
 }

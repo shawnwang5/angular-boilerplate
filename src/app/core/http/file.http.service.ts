@@ -6,19 +6,26 @@ export class FileHttpService {
     constructor (private http: Http) {
     }
 
-    uploadFile (url, params, requestFinish, uploadCallback) {
+    /**
+     * 上传文件
+     * @param url { function }
+     * @param reqParams { FormData }
+     * @param requestFinishFn { function }
+     * @param progressFn { function }
+     * @returns {XMLHttpRequest}
+     */
+    uploadFile (url, reqParams, requestFinishFn, progressFn) {
         const xhr = new XMLHttpRequest()
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4) {
-                requestFinish(xhr.response, xhr.status)
+                requestFinishFn(JSON.parse(xhr.response), xhr.status)
             }
         }
         xhr.upload.onprogress = (event) => {
-            uploadCallback(event.loaded, event.total)
+            progressFn(event.loaded, event.total)
         }
         xhr.open('POST', url, true)
-        xhr.send(params)
+        xhr.send(reqParams)
         return xhr
     }
-
 }

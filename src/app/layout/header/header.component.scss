@@ -1,5 +1,18 @@
 @import "../../shared/scss/variables.scss";
 
 header {
-  padding: 0 $containerPaddingLeft;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  background-color: #f5eded;
+
+  & > .left-side {
+    margin-left: 20px;
+  }
+
+  & > .right-side {
+    margin-right: 20px;
+  }
 }
