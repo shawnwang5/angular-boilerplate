@@ -1,4 +1,8 @@
 /** start commons.scss **/
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 .clearfix {
   &::before, &::after {
     content: '';
