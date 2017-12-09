@@ -1,5 +1,8 @@
 @import "../../shared/scss/variables.scss";
 
 footer {
-  padding: 0 $containerPaddingLeft;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin: 10px 0;
 }

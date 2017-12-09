@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
-import { IAppState } from '../../store/models'
-import { NgRedux } from '_@angular-redux_store@6.5.7@@angular-redux/store/lib/src'
 import { LayoutChildGuardService } from '../layout-child-guard.service'
+import { Store } from '@ngrx/store'
+import { IAppState } from '../../store/app/model'
 
 @Component({
     selector: 'app-menu',
@@ -13,12 +13,14 @@ export class MenuComponent implements OnInit, OnDestroy {
     activePath = ''
     menus = []
     subscriberArray = []
+    app: any
 
-    constructor (private router: Router, private ngRedux: NgRedux<IAppState>, private layoutChildGuardService: LayoutChildGuardService) {
-        this.initSubscriberArray()
+    constructor (private router: Router, private layoutChildGuardService: LayoutChildGuardService,
+                 private store: Store<IAppState>) {
     }
 
     ngOnInit () {
+        this.initSubscriberArray()
     }
 
     ngOnDestroy (): void {
@@ -26,12 +28,14 @@ export class MenuComponent implements OnInit, OnDestroy {
     }
 
     initSubscriberArray () {
-        this.subscriberArray.push(this.ngRedux.select('commons').subscribe(data => {
-            this.menus = (<any>data).menus[ 'common' ]
-            this.resetMenuStatus()
-        }))
+        this.subscriberArray.push(
+            this.store.select('app').subscribe(appState => {
+                this.menus = (<any>appState).menus || []
+                this.resetMenuStatus()
+            })
+        )
         this.subscriberArray.push(this.layoutChildGuardService.sideMenuActivePath.subscribe(targetURL => {
-            this.activePath = <string>targetURL
+            this.resetMenuStatus()
         }))
     }
 
