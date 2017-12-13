@@ -4,11 +4,9 @@ import { RouterModule } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { HttpClientModule } from '@angular/common/http'
-import { TranslateModule } from '@ngx-translate/core'
 
 import { CustomFormsModule } from 'ng2-validation'
 import { NgxPaginationModule } from 'ngx-pagination'
-import { TreeModule } from 'angular-tree-component'
 import { ClickOutsideModule } from 'ng-click-outside'
 import { PaginationModule } from 'ngx-bootstrap/pagination'
 import { UIPluginsModule } from './ui-plugins/index.module'
@@ -21,11 +19,9 @@ import { UtilPluginsModule } from './util-plugins/index.module'
         FormsModule,
         ReactiveFormsModule,
         CustomFormsModule,
-        TranslateModule,
         HttpModule,
         HttpClientModule,
         ClickOutsideModule,
-        TreeModule,
         UIPluginsModule,
         UtilPluginsModule,
         NgxPaginationModule,
@@ -34,10 +30,8 @@ import { UtilPluginsModule } from './util-plugins/index.module'
     declarations: [],
     exports: [
         RouterModule,
-        TreeModule,
         FormsModule,
         ReactiveFormsModule,
-        TranslateModule,
         CustomFormsModule,
         ClickOutsideModule,
         NgxPaginationModule,

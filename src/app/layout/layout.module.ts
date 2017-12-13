@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 
-import { TranslateModule } from '@ngx-translate/core'
-
 import { LayoutComponent } from './layout.component'
 import { HeaderComponent } from './header/header.component'
 import { FooterComponent } from './footer/footer.component'
@@ -14,7 +12,6 @@ import { MenuComponent } from './menu/menu.component'
 @NgModule({
     imports: [
         SharedModule,
-        TranslateModule,
         RouterModule,
         CommonModule
     ],

@@ -10,7 +10,7 @@ export class DemoApi {
         return HttpUtils.post(url, params)
     }
 
-    static function001 () {
-        return DemoApi.post(DemoApi.getServerURL('admin/function001'), {})
+    static queryXXList () {
+        return DemoApi.post(DemoApi.getServerURL('queryXXList'), {})
     }
 }

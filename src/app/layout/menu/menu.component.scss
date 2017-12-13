@@ -1,7 +1,7 @@
 $menuPaddingLeftIncrement: 20;
 
 .menu {
-  background-color: #364760;
+  background-color: #1F9792;
   color: #FFF;
   display: flex;
   flex: 1;
@@ -16,8 +16,8 @@ $menuPaddingLeftIncrement: 20;
     }
 
     @mixin itemActive {
-      color: #2BB9E6;
-      background-color: #2A394F;
+      color: #fff;
+      background-color: #24aea8;
     }
 
     .menu-item {
@@ -43,6 +43,10 @@ $menuPaddingLeftIncrement: 20;
           vertical-align: middle;
           margin-right: 10px;
           margin-top: -4px;
+
+          &::before {
+            color: #FFF;
+          }
         }
       }
     }

@@ -171,10 +171,6 @@
     magic-string "^0.22.3"
     source-map "^0.5.6"
 
-"@ngx-translate/core@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-7.1.0.tgz#5087a65c8ff312e4244ca0646ed45cde83b170cd"
-
 "@ngx-translate/http-loader@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-1.0.2.tgz#cd4aa2cb73e400346dacaae2dac5d29dc58c298a"
