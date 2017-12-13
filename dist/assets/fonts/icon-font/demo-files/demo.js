@@ -15,14 +15,14 @@ document.body.addEventListener("click", function (e) {
         testDrive = document.getElementById('testDrive'),
         testText = document.getElementById('testText')
 
-    function updateTest() {
+    function updateTest () {
         testDrive.innerHTML = testText.value || String.fromCharCode(160)
         if (window.icomoonLiga) {
             window.icomoonLiga(testDrive)
         }
     }
 
-    function updateSize() {
+    function updateSize () {
         testDrive.style.fontSize = fontSize.value + 'px'
     }
 
