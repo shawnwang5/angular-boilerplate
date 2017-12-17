@@ -14,5 +14,9 @@ header {
 
   & > .right-side {
     margin-right: 20px;
+
+    .text-btn {
+      background-color: transparent;
+    }
   }
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
 
-import { LoginPageComponent } from './login/login.page.component'
+import { LoginPageComponent } from './login/index.page'
 import { SharedModule } from '../../shared/shared.module'
 
 const routes: Routes = [

@@ -15,4 +15,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     ngOnDestroy (): void {
     }
+
+    onLogout () {
+        this.router.navigate([ '/account/login' ])
+    }
 }

@@ -4,8 +4,8 @@ import { Router } from '@angular/router'
 
 @Component({
     selector: 'app-login',
-    templateUrl: './login.page.component.html',
-    styleUrls: [ './login.page.component.scss' ]
+    templateUrl: './index.page.html',
+    styleUrls: [ './index.page.scss' ]
 })
 export class LoginPageComponent implements OnInit {
     valForm
