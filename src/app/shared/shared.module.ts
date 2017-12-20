@@ -4,40 +4,36 @@ import { RouterModule } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { HttpClientModule } from '@angular/common/http'
-
-import { CustomFormsModule } from 'ng2-validation'
-import { NgxPaginationModule } from 'ngx-pagination'
-import { ClickOutsideModule } from 'ng-click-outside'
-import { PaginationModule } from 'ngx-bootstrap/pagination'
 import { UIPluginsModule } from './ui-plugins/index.module'
 import { UtilPluginsModule } from './util-plugins/index.module'
+import { MyBootstrapModule } from '../bootstrap/index.module'
+import { ClickOutsideModule } from 'ng-click-outside'
+import { NgxPageScrollModule } from 'ngx-page-scroll'
 
 @NgModule({
     imports: [
         RouterModule,
         CommonModule,
         FormsModule,
+        MyBootstrapModule,
         ReactiveFormsModule,
-        CustomFormsModule,
+        ClickOutsideModule,
+        NgxPageScrollModule,
         HttpModule,
         HttpClientModule,
-        ClickOutsideModule,
         UIPluginsModule,
-        UtilPluginsModule,
-        NgxPaginationModule,
-        PaginationModule.forRoot()
+        UtilPluginsModule
     ],
     declarations: [],
     exports: [
         RouterModule,
         FormsModule,
         ReactiveFormsModule,
-        CustomFormsModule,
         ClickOutsideModule,
-        NgxPaginationModule,
+        NgxPageScrollModule,
+        MyBootstrapModule,
         UIPluginsModule,
-        UtilPluginsModule,
-        PaginationModule
+        UtilPluginsModule
     ]
 })
 export class SharedModule {

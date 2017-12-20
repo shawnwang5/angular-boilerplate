@@ -5,17 +5,14 @@ export interface IAppState {
 export const initialState: IAppState = {
     menus: [
         {
-            text: '首页',
-            path: '/home',
+            text: '简单UI组件',
+            path: '/simpleUI',
             type: 'level1',
-            isFolded: true,
+            isFolded: false,
             icon: 'icon-case',
             children: [
-                {
-                    text: '首页',
-                    path: '/home',
-                    type: 'level2'
-                }
+                { text: '表格', path: '/simpleUI/table', type: 'level2' },
+                { text: '表单', path: '/simpleUI/form', type: 'level2' }
             ]
         },
         {

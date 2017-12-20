@@ -22,7 +22,7 @@ export class LoginPageComponent implements OnInit {
     }
 
     login () {
-        this.router.navigate([ '/home' ])
+        this.router.navigate([ '/simpleUI/table' ])
         if (this.valForm.valid) {
         } else {
             Object.keys(this.valForm.controls).forEach(key => this.valForm.controls[ key ].markAsDirty())

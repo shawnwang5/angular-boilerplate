@@ -1,4 +1,6 @@
 $menuPaddingLeftIncrement: 20;
+$level1LineHeight: 60px;
+$level2LineHeight: 40px;
 
 .menu {
   background-color: #1F9792;
@@ -21,8 +23,6 @@ $menuPaddingLeftIncrement: 20;
     }
 
     .menu-item {
-      line-height: 60px;
-
       &.active {
         & > .menu-text {
           @include itemActive;
@@ -30,6 +30,7 @@ $menuPaddingLeftIncrement: 20;
       }
 
       & > .menu-text {
+        line-height: $level1LineHeight;
         color: #FFF;
         display: block;
         cursor: pointer;
@@ -53,6 +54,7 @@ $menuPaddingLeftIncrement: 20;
 
     .level2 {
       .menu-text {
+        line-height: $level2LineHeight;
         padding-left: $menuPaddingLeftIncrement * 2 + px;
       }
     }

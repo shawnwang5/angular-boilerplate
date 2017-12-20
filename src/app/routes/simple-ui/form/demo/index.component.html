@@ -1,0 +1,45 @@
+<form class="form">
+    <div class="form-group">
+        <span class="control-label">性别(方形单选)</span>
+        <div class="radio-container">
+            <div class="my-radio">
+                <input type="radio" id="female" name="genderCheckbox" checked>
+                <label for="female"><i class="icon check"></i><span>女</span></label>
+            </div>
+            <div class="my-radio">
+                <input type="radio" id="male" name="genderCheckbox">
+                <label for="male"><i class="icon check"></i><span>男</span></label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="control-label">性别(圆形单选)</span>
+        <div class="radio-container">
+            <div class="my-radio">
+                <input type="radio" id="female1" name="genderCircle" checked>
+                <label for="female1"><i class="icon circle"></i><span>女</span></label>
+            </div>
+            <div class="my-radio">
+                <input type="radio" id="male1" name="genderCircle">
+                <label for="male1"><i class="icon circle"></i><span>男</span></label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="control-label">爱好(checkbox)</span>
+        <div class="checkbox-container">
+            <div class="my-checkbox">
+                <input id="hobby1" type="checkbox" checked/>
+                <label for="hobby1"> <i class="icon"></i><span>阅读</span></label>
+            </div>
+            <div class="my-checkbox">
+                <input id="hobby2" type="checkbox"/>
+                <label for="hobby2"> <i class="icon"></i><span>电影</span></label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="control-label">下拉选择</span>
+        <app-select [currText]="'请选择'" [dataList]="selectListData"></app-select>
+    </div>
+</form>

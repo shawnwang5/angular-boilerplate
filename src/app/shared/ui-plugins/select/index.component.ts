@@ -1,16 +1,20 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 
+export interface ISelectItem {
+    value: string
+    text: string
+}
+
 @Component({
     selector: 'app-select',
     templateUrl: './index.component.html',
     styleUrls: [ './index.component.scss' ]
 })
-export class IndexComponent implements OnInit {
-    isShowSelectUL = false
-
-    @Input() currText
+export class SelectComponent implements OnInit {
+    @Input() currText = ''
     @Input() dataList: Array<ISelectItem>
     @Output('selectChanged') selectChanged = new EventEmitter()
+    isShowSelectUL = false
 
     constructor () {
     }
@@ -18,13 +22,26 @@ export class IndexComponent implements OnInit {
     ngOnInit () {
     }
 
-    handleSelectItemClick (item: ISelectItem) {
+    show () {
+        this.isShowSelectUL = true
+    }
+
+    hide () {
         this.isShowSelectUL = false
-        this.currText = item.text
-        this.selectChanged.emit(item)
+    }
+
+    toggle () {
+        this.isShowSelectUL = !this.isShowSelectUL
+    }
+
+    handleSelectItemClick ({ text, value }) {
+        this.currText = text
+        this.selectChanged.emit({ text, value })
+        this.hide()
     }
 
     handleClickedOutside () {
-        this.isShowSelectUL = false
+        console.log(1111)
+        this.hide()
     }
 }

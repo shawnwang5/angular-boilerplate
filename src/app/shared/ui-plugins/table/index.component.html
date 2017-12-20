@@ -1,0 +1,49 @@
+<!-- START table-responsive-->
+<div class="table-container">
+    <div class="table-responsive table" [class.table-no-data]="totalItems === 0">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th [style.width]="colProps[prop].width || 'initial'"
+                    [style.min-width]="colProps[prop].minWidth || 'initial'"
+                    [style.text-align]="colProps[prop].textAlign || 'center'" *ngFor="let prop of getColPropsKeys()">
+                    {{ colProps[prop].label }}
+                </th>
+                <ng-container *ngTemplateOutlet="headerTpl"></ng-container>
+            </tr>
+            </thead>
+            <tbody *ngIf="tableData && tableData.length > 0">
+            <tr *ngFor="let row of addTableNoToTableData(); let indexInList = index">
+                <td *ngFor="let prop of getColPropsKeys()" [style.text-align]="colProps[prop].textAlign || 'center'"
+                    [innerHTML]="row[prop]">
+                </td>
+                <ng-container
+                        *ngTemplateOutlet="bodyTpl;context: { row: row, indexInList: indexInList }"></ng-container>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="paginationContainer" *ngIf="tableData && tableData.length !== 0 && totalItems > pageSize">
+        <div class="tips">
+            <div class="per-page">{{ pageSize }}条/页</div>
+            <div class="total-items">共{{ totalItems }}条，共{{ totalPages }}页</div>
+        </div>
+        <pagination
+                *ngIf="hasPagination"
+                (pageChanged)="handlePageChanged($event)"
+                [firstText]="'首页'"
+                [lastText]="'末页'"
+                [previousText]="'上一页'"
+                [nextText]="'下一页'"
+                [maxSize]="5"
+                [totalItems]="totalItems"
+                [itemsPerPage]="pageSize"
+                [boundaryLinks]="true"
+                [directionLinks]="true">
+        </pagination>
+    </div>
+
+    <div *ngIf="tableData && tableData.length === 0" class="empty-tips">暂无数据</div>
+</div>
+<!-- END table-responsive-->

@@ -1,0 +1,10 @@
+@import "../../../shared/scss/commons.scss";
+
+:host {
+  @include pageContainer;
+}
+
+.page {
+  @include page;
+  flex-direction: column;
+}

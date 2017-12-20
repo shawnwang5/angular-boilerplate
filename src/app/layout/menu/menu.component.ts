@@ -17,6 +17,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
     constructor (private router: Router, private layoutChildGuardService: LayoutChildGuardService,
                  private store: Store<IAppState>) {
+        this.activePath = this.router.url
     }
 
     ngOnInit () {
@@ -34,13 +35,15 @@ export class MenuComponent implements OnInit, OnDestroy {
                 this.resetMenuStatus()
             })
         )
-        this.subscriberArray.push(this.layoutChildGuardService.sideMenuActivePath.subscribe(targetURL => {
-            this.resetMenuStatus()
-        }))
+        this.subscriberArray.push(
+            this.layoutChildGuardService.sideMenuActivePath.subscribe(targetURL => {
+                this.activePath = <string>targetURL
+                this.resetMenuStatus()
+            })
+        )
     }
 
     resetMenuStatus () {
-        this.activePath = this.router.url
         this.menus.forEach(level1 => {
             if (this.activePath.indexOf(level1.path) === 0) {
                 level1.isFolded = false

@@ -1,0 +1,17 @@
+<app-table
+        [tableData]="listData"
+        [colProps]="colProps"
+        [totalItems]="pagination.totalItems"
+        [pageSize]="pagination.pageSize"
+        [headerTpl]="headerTpl"
+        [bodyTpl]="bodyTpl"
+        (pageChanged)="handlePageChanged($event)">
+    <ng-template #headerTpl>
+        <th>操作</th>
+    </ng-template>
+    <ng-template #bodyTpl let-row="row">
+        <td>
+            <a href="javascript: void(0)" class="text-btn" (click)="onReadSourceCodeClick()">查看源代码</a>
+        </td>
+    </ng-template>
+</app-table>

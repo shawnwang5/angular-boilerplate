@@ -11,7 +11,8 @@ export const routes: Routes = [
             LayoutChildGuardService
         ],
         children: [
-            { path: 'home', loadChildren: './home/home.module#HomeModule' },
+            { path: 'home', loadChildren: './home/index.module#HomeModule' },
+            { path: 'simpleUI', loadChildren: './simple-ui/index.module#SimpleUIModule' },
             { path: '**', redirectTo: '/account/login' }
         ]
     },

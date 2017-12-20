@@ -1,0 +1,80 @@
+.table-container {
+  .table-bordered > thead > tr /deep/ > th, .table-bordered > thead > tr > td {
+    border-bottom-width: 1px;
+  }
+
+  & > .table {
+    margin-bottom: 0;
+
+    table {
+      margin-bottom: 0;
+
+      thead tr {
+        background-color: #FFF;
+      }
+
+      tr:nth-of-type(odd) {
+        background-color: #e4e9f2;
+      }
+
+      tr:nth-of-type(even) {
+        background-color: #FFF;
+      }
+
+      tbody {
+        line-height: 60px;
+      }
+
+      tr /deep/ th, tr /deep/ td {
+        vertical-align: middle;
+        text-align: center;
+
+        .text-btn {
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  & > .empty-tips {
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    padding: 30px 0;
+  }
+
+  .paginationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+
+    & > .tips {
+      display: flex;
+
+      & > div {
+        margin-right: 10px;
+      }
+    }
+
+    pagination /deep/ .pagination .page-item {
+      margin-right: 8px;
+
+      a {
+        color: #2BB9E6;
+        border: 0;
+      }
+
+      &.active {
+        a {
+          color: #9B9B9B;
+          background-color: transparent;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

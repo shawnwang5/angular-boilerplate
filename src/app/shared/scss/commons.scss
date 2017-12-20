@@ -3,6 +3,17 @@
   -webkit-overflow-scrolling: touch;
 }
 
+@mixin pageContainer {
+  flex: 1;
+  display: flex;
+}
+
+@mixin page {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+}
+
 .clearfix {
   &::before, &::after {
     content: '';

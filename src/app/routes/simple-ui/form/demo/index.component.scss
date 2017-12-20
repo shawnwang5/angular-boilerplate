@@ -1,0 +1,38 @@
+form {
+  flex: 1;
+
+  .form-group {
+    $lineHeight: 40px;
+
+    display: flex;
+    align-items: center;
+    line-height: $lineHeight;
+
+    .control-label {
+      flex: 0 0 120px;
+      text-align: right;
+      margin-right: 25px;
+    }
+
+    .checkbox-container, .radio-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox-container {
+      .my-checkbox {
+        margin-right: 15px;
+      }
+    }
+
+    .radio-container {
+      .my-radio {
+        margin-right: 15px;
+      }
+    }
+
+    app-select {
+      height: 34px;
+    }
+  }
+}

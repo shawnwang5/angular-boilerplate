@@ -1,18 +1,18 @@
-/*<div class="radio">
-<input type="radio" id="radio" checked
-(change)="handleRadioCheckedChanged()">
-<label for="radio">单选框</label>
+/*<div class="my-radio">
+<input type="radio" id="radio" checked>
+<label for="radio"><i class="icon check"></i>单选框</label>
 </div>*/
 
-.radio {
+.my-radio {
   display: inline-block;
   vertical-align: top;
 
   label {
     font-size: 16px;
-    display: inline-block;
-    vertical-align: top;
     cursor: pointer;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
 
     & > .icon.check {
       width: 20px;
@@ -21,15 +21,15 @@
       vertical-align: top;
       position: relative;
       border: 1px solid #cccccc;
-      border-radius: 18px;
+      border-radius: 4px;
       cursor: pointer;
       box-sizing: border-box;
       margin-right: 9px;
 
       &::after {
         content: '';
-        width: 9px;
-        height: 5px;
+        width: 12px;
+        height: 7px;
         position: absolute;
         top: 3px;
         left: 3px;
@@ -69,18 +69,20 @@
   input[type=radio] {
     display: none;
 
+    $checkedColor: #2BB9E6;
+
     &:checked + label {
       & > .icon.circle {
-        border-color: #3498db;
+        border-color: $checkedColor;
 
         &::before {
-          background-color: #3498db;
+          background-color: $checkedColor;
         }
       }
 
       & > .icon.check {
-        background-color: #3399cc;
-        border-color: #3399cc;
+        background-color: $checkedColor;
+        border-color: $checkedColor;
 
         &::after {
           border-left-color: #FFF;

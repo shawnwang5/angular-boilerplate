@@ -1,21 +1,28 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
-
-import { SelectModule } from './select/index.module'
-import { DateSelectModule } from './date-select/index.module'
+import { ClickOutsideModule } from 'ng-click-outside'
+import { PaginationModule } from 'ngx-bootstrap/pagination'
+import { TableComponent } from './table/index.component'
+import { SelectComponent } from './select/index.component'
+import { LoadingComponent } from './loading/index.component'
 
 @NgModule({
     imports: [
         RouterModule,
-        SelectModule,
-        DateSelectModule,
+        PaginationModule,
+        ClickOutsideModule,
         CommonModule
     ],
-    declarations: [],
+    declarations: [
+        TableComponent,
+        LoadingComponent,
+        SelectComponent
+    ],
     exports: [
-        SelectModule,
-        DateSelectModule
+        SelectComponent,
+        LoadingComponent,
+        TableComponent
     ]
 })
 export class UIPluginsModule {

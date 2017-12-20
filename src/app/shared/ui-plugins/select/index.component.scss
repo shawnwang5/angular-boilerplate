@@ -1,2 +1,67 @@
+$lineHeight: 32px;
+
+:host {
+  display: flex;
+}
+
 .select {
+  flex: 1;
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: inline-block;
+  border: 1px solid #9B9B9B;
+  cursor: pointer;
+  position: relative;
+  line-height: $lineHeight;
+  border-radius: 4px;
+
+  & > .select-text {
+    height: $lineHeight;
+    padding: 0 42px 0 10px;
+    color: #222222;
+    position: relative;
+    white-space: nowrap;
+
+    .icon {
+      font-size: 16px;
+      position: absolute;
+      top: 9px;
+      right: 14px;
+    }
+  }
+
+  & > .select-ul {
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 10000;
+    border: 1px solid #D4D4D4;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #FFF;
+
+    & > li {
+      text-indent: 10px;
+      color: #222222;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: $lineHeight;
+      line-height: $lineHeight;
+
+      &.active {
+        color: #fff;
+        background: #195DA3;
+      }
+
+      &:hover {
+        color: #fff;
+        background: #6AA7EA;
+      }
+    }
+  }
 }
