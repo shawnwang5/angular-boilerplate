@@ -1,6 +1,9 @@
 # angular4-seed
 angular 4+ seed project
 
+## WebSite
+[website](http://angular-seed.oss-cn-hangzhou.aliyuncs.com/#/simpleUI/table)
+
 ## Build Setup
 
 ``` bash
