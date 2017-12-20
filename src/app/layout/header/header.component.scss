@@ -18,5 +18,26 @@ header {
 
   & > .right-side {
     margin-right: 20px;
+
+    .text-btn {
+      line-height: 18px;
+      height: 18px;
+      display: inline-block;
+
+      .icon-github {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
+
+    a.text-btn {
+      cursor: pointer;
+      color: #000;
+
+      &:hover, &:focus {
+        color: #565151;
+        text-decoration: none;
+      }
+    }
   }
 }

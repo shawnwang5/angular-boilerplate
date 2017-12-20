@@ -12,10 +12,9 @@ export const routes: Routes = [
         ],
         children: [
             { path: 'home', loadChildren: './home/index.module#HomeModule' },
-            { path: 'simpleUI', loadChildren: './simple-ui/index.module#SimpleUIModule' },
-            { path: '**', redirectTo: '/simpleUI/table' }
+            { path: 'simpleUI', loadChildren: './simple-ui/index.module#SimpleUIModule' }
         ]
     },
     { path: 'account', loadChildren: './account/account.module#AccountModule' },
-    { path: '**', redirectTo: '/account/login' }
+    { path: '**', redirectTo: '/simpleUI/table' }
 ]
