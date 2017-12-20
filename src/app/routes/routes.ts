@@ -12,7 +12,8 @@ export const routes: Routes = [
         ],
         children: [
             { path: 'home', loadChildren: './home/index.module#HomeModule' },
-            { path: 'simpleUI', loadChildren: './simple-ui/index.module#SimpleUIModule' }
+            { path: 'simpleUI', loadChildren: './simple-ui/index.module#SimpleUIModule' },
+            { path: '', redirectTo: '/simpleUI/table', pathMatch: 'full' }
         ]
     },
     { path: 'account', loadChildren: './account/account.module#AccountModule' },
