@@ -14,12 +14,19 @@ export class SelectComponent implements OnInit {
     @Input() currText = ''
     @Input() dataList: Array<ISelectItem>
     @Output('selectChanged') selectChanged = new EventEmitter()
+
+    initText: string
     isShowSelectUL = false
 
     constructor () {
     }
 
     ngOnInit () {
+        this.initText = this.currText
+    }
+
+    reset () {
+        this.currText = this.initText
     }
 
     show () {
@@ -37,11 +44,6 @@ export class SelectComponent implements OnInit {
     handleSelectItemClick ({ text, value }) {
         this.currText = text
         this.selectChanged.emit({ text, value })
-        this.hide()
-    }
-
-    handleClickedOutside () {
-        console.log(1111)
         this.hide()
     }
 }
