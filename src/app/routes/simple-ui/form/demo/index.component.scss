@@ -1,3 +1,7 @@
+:host {
+  flex: none;
+}
+
 form {
   flex: 1;
 
@@ -12,6 +16,10 @@ form {
       flex: 0 0 120px;
       text-align: right;
       margin-right: 25px;
+    }
+
+    app-select {
+      flex: 0 0 100px;
     }
 
     .checkbox-container, .radio-container {

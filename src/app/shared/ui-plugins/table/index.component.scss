@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .table-container {
   .table-bordered > thead > tr /deep/ > th, .table-bordered > thead > tr > td {
     border-bottom-width: 1px;

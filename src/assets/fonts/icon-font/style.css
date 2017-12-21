@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'iconfont';
-    src: url('fonts/iconfont.ttf?43kt6l') format('truetype'),
-    url('fonts/iconfont.woff?43kt6l') format('woff'),
-    url('fonts/iconfont.svg?43kt6l#iconfont') format('svg');
+    src: url('fonts/iconfont.ttf?wx5h4q') format('truetype'),
+    url('fonts/iconfont.woff?wx5h4q') format('woff'),
+    url('fonts/iconfont.svg?wx5h4q#iconfont') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,30 +22,27 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-drop-down:before {
+    content: "\e907";
+}
 .icon-login:before {
     content: "\e906";
 }
-
 .icon-component:before {
     content: "\e905";
 }
-
 .icon-home:before {
     content: "\e904";
 }
-
 .icon-trash-basket:before {
     content: "\e903";
 }
-
 .icon-task:before {
     content: "\e902";
 }
-
 .icon-message:before {
     content: "\e901";
 }
-
 .icon-github:before {
     content: "\e900";
 }

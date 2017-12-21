@@ -7,8 +7,4 @@
 .page {
   @include page;
   flex-direction: column;
-
-  app-demo-table {
-    flex: 1;
-  }
 }
