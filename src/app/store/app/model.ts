@@ -29,6 +29,7 @@ export const initialState: IAppState = {
             queryParams: { pageType: 'sideMenu' },
             type: 'level1',
             isFolded: true,
+            iconFontSize: '14px',
             icon: 'icon-login'
         }
     ]

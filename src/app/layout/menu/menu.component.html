@@ -3,7 +3,8 @@
         <li class="menu-item level1" [class.folded]="level1.isFolded"
             [class.active]="activePath.indexOf(level1.path) === 0" *ngFor="let level1 of menus">
             <a href="javascript: void(0)" class="menu-text" (click)="handleMenuItemClick(level1)"><i
-                    [class]="'icon iconfont ' + level1.icon"></i>{{ level1.text}}</a>
+                    [class]="'icon iconfont ' + level1.icon" [style.font-size]="level1.iconFontSize || 'inherit'"></i>{{
+                level1.text}}</a>
             <ul class="level2" *ngIf="level1?.children?.length > 0">
                 <li class="menu-item level2" [class.active]="activePath.indexOf(level2.path) === 0"
                     *ngFor="let level2 of level1.children">

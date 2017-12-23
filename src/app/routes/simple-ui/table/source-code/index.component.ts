@@ -10,7 +10,8 @@ import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll'
 export class SourceCodeComponent implements OnInit {
     sourceCode = {
         template: require('!raw-loader!../demo/index.component.html'),
-        component: require('!raw-loader!../demo/index.component')
+        component: require('!raw-loader!../demo/index.component'),
+        mockData: require('!raw-loader!../demo/mock')
     }
 
     constructor (private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {

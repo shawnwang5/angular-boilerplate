@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core'
 })
 export class ThirdLibraryListPageComponent implements OnInit {
     listContent = require('html-loader!markdown-loader!./third-library-list.md')
+
     constructor () {
     }
 

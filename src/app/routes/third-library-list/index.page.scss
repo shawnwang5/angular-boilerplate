@@ -8,8 +8,13 @@
   @include page;
   flex-direction: column;
 
+  & > /deep/ * {
+    flex: 0 0 auto;
+  }
+
   /deep/ h2 {
     margin-bottom: 20px;
+    line-height: 32px;
 
     &:not(:first-child) {
       margin-top: 20px;
