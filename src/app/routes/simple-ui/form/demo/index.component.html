@@ -42,4 +42,9 @@
         <span class="control-label">下拉选择</span>
         <app-select [currText]="'请选择'" [dataList]="selectListData"></app-select>
     </div>
+    <div class="form-group">
+        <span class="control-label"></span>
+        <button class="btn btn-primary" (click)="loading.show()">显示loading</button>
+    </div>
 </form>
+<app-loading #loading [shadeClickable]="true" content="请稍候..."></app-loading>

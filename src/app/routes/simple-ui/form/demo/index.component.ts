@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ViewChild } from '@angular/core'
 
 @Component({
     selector: 'app-form-demo',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core'
     styleUrls: [ './index.component.scss' ]
 })
 export class FormDemoComponent implements OnInit {
+    @ViewChild('loading') loading
+
     selectListData: { text, value }[] = [
         { text: '选择1', value: 1 },
         { text: '选择2', value: 2 },

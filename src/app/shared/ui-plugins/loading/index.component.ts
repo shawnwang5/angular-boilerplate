@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 export class LoadingComponent implements OnInit {
     @Input() content = '请等待...'
+    @Input() shadeClickable = false
 
     isShow = false
 
@@ -22,5 +23,11 @@ export class LoadingComponent implements OnInit {
 
     hide () {
         this.isShow = false
+    }
+
+    onShadeClick () {
+        if (this.shadeClickable) {
+            this.hide()
+        }
     }
 }

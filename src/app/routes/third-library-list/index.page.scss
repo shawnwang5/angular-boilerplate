@@ -1,0 +1,26 @@
+@import "../../shared/scss/commons.scss";
+
+:host {
+  @include pageContainer;
+}
+
+.page {
+  @include page;
+  flex-direction: column;
+
+  /deep/ h2 {
+    margin-bottom: 20px;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  /deep/ ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
