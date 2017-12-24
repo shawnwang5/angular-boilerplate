@@ -2,7 +2,7 @@
 A boilerplate project for angular
 
 ## WebSite
-[website](http://angular-boilerplate.oss-cn-hangzhou.aliyuncs.com/#/simpleUI/table)
+[website](https://angular-boilerplate.oss-cn-hangzhou.aliyuncs.com/#/simpleUI/table)
 
 ## Build Setup
 
@@ -10,7 +10,7 @@ A boilerplate project for angular
 # install dependencies
 yarn install
 
-# serve with hot reload at localhost:8080
+# to start deving with livereload site at http://localhost:4201
 npm run start
 
 # build for production with minification
