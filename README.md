@@ -1,8 +1,8 @@
-# angular4-seed
-angular 4+ seed project
+# angular-boilerplate
+A boilerplate project for angular
 
 ## WebSite
-[website](https://angular-seed.oss-cn-hangzhou.aliyuncs.com/#/simpleUI/table)
+[website](http://angular-boilerplate.oss-cn-hangzhou.aliyuncs.com/#/simpleUI/table)
 
 ## Build Setup
 

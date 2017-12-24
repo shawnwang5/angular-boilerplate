@@ -1,13 +1,13 @@
 {
-  "name": "angular4-seed",
-  "description": "angular4 seed project",
+  "name": "angular-boilerplate",
+  "description": "A boilerplate project for angular",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --port 4201",
     "build": "ng build --prod",
-    "build--for-github": "ng build --base-href /angular-seed/dist/ --prod",
+    "build--for-github": "ng build --base-href /angular-boilerplate/dist/ --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
