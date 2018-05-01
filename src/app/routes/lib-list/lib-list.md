@@ -1,5 +1,5 @@
 ## UI组件库
-* [Element](https://github.com/eleme/element-angular)
+* [Element](https://element-angular.faas.ele.me/guide/install)
 * [Material](https://github.com/angular/material2)
 * [ngx-bootstrap](https://github.com/valor-software/ngx-bootstrap)
 

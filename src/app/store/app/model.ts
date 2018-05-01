@@ -17,7 +17,7 @@ export const initialState: IAppState = {
         },
         {
             text: '推荐的三方库',
-            path: '/third-library-list',
+            path: '/lib-list',
             type: 'level1',
             isFolded: false,
             icon: 'icon-list',

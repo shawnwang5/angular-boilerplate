@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 import { SharedModule } from '../../shared/shared.module'
-import { ThirdLibraryListPageComponent } from './index.page'
+import { LibListPageComponent } from './index.page'
 import { Router, RouterModule, Routes } from '@angular/router'
 
 const routes: Routes = [
-    {path: '', component: ThirdLibraryListPageComponent}
+    {path: '', component: LibListPageComponent}
 ]
 
 @NgModule({
@@ -15,8 +15,8 @@ const routes: Routes = [
         SharedModule
     ],
     declarations: [
-        ThirdLibraryListPageComponent
+        LibListPageComponent
     ]
 })
-export class ThirdLibraryListModule {
+export class LibListModule {
 }

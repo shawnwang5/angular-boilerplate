@@ -13,7 +13,7 @@ export const routes: Routes = [
         children: [
             { path: 'home', loadChildren: './home/index.module#HomeModule' },
             { path: 'simpleUI', loadChildren: './simple-ui/index.module#SimpleUIModule' },
-            { path: 'third-library-list', loadChildren: './third-library-list/index.module#ThirdLibraryListModule' },
+            { path: 'lib-list', loadChildren: './lib-list/index.module#LibListModule' },
             { path: '', redirectTo: '/simpleUI/table', pathMatch: 'full' }
         ]
     },

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core'
 
 @Component({
-    selector: 'app-third-library-list',
+    selector: 'app-lib-list',
     templateUrl: './index.page.html',
     styleUrls: [ './index.page.scss' ]
 })
-export class ThirdLibraryListPageComponent implements OnInit {
-    listContent = require('html-loader!markdown-loader!./third-library-list.md')
+export class LibListPageComponent implements OnInit {
+    listContent = require('html-loader!markdown-loader!./lib-list.md')
 
     constructor () {
     }

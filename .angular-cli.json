@@ -19,11 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "app/third-library/code-pretty/prettify.css",
+        "app/lib/code-pretty/prettify.css",
         "styles.scss"
       ],
       "scripts": [
-        "app/third-library/code-pretty/prettify.js"
+        "app/lib/code-pretty/prettify.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
