@@ -1,9 +1,9 @@
 import { HttpUtils } from '../shared/util-plugins/http/http.utils'
-import { AppConfig } from '../config/app.config'
+import {environment} from '../../environments/environment';
 
 export class DemoApi {
     static getServerURL (path) {
-        return AppConfig.serverURL + path
+        return environment.apiBaseURL + path
     }
 
     static post (url: string, params: Object) {

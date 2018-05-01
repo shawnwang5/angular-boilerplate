@@ -19,7 +19,6 @@ npm run build
 
 ### 目录结构
 1. src/app/api：后台接口定义
-1. src/app/config：应用的配置文件
 1. src/app/bootstrap：ngx-bootstrap 相关文件
 1. src/app/layout：应用的布局框架
 1. src/app/routes：路由配置、页面文件
